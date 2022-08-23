@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClInclude Include="source\define.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="source\Application.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="source\window\GLWindow.h">
+      <Filter>source\window</Filter>
+    </ClInclude>
+    <ClInclude Include="source\window\IWindow.h">
+      <Filter>source\window</Filter>
+    </ClInclude>
+    <ClInclude Include="source\render\OpenGLContext.h" />
+    <ClInclude Include="source\render\RenderContext.h" />
+    <ClInclude Include="source\render\UIContext.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="source\Application.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="source\window\GLWindow.cpp">
+      <Filter>source\window</Filter>
+    </ClCompile>
+    <ClCompile Include="source\main.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="source\render\OpenGLContext.cpp" />
+    <ClCompile Include="source\render\RenderContext.cpp" />
+    <ClCompile Include="source\render\UIContext.cpp" />
+    <ClCompile Include="source\glad.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="source">
+      <UniqueIdentifier>{8c468ea9-3089-4817-930d-c2b2b45bd110}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\window">
+      <UniqueIdentifier>{8bb34e0f-0131-46e7-bdfd-aac58c6b0f18}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+</Project>
