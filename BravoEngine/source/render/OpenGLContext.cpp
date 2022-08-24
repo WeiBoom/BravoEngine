@@ -23,7 +23,7 @@ namespace Bravo
 
 	static void on_window_close_callback(GLFWwindow* window)
 	{
-		Bravo::IWindow* pWindow = static_cast<Bravo::IWindow*>(glfwGetWindowUserPointer(window););
+		Bravo::IWindow* pWindow = static_cast<Bravo::IWindow*>(glfwGetWindowUserPointer(window));
 		pWindow->on_close();
 	}
 
