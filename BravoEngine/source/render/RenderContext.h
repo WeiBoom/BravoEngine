@@ -12,19 +12,19 @@ namespace Bravo
 
         RenderContext() : m_window(nullptr) {}
 
-        virtual bool init(Bravo::IWindow* window)
+        virtual bool Init(Bravo::IWindow* window)
         {
             m_window = window;
             return true;
         }
 
-        virtual void pre_render() = 0;
+        virtual void PreRender() = 0;
 
         void Render();
 
-        virtual void post_render() = 0;
+        virtual void PostRender() = 0;
 
-        virtual void end() = 0;
+        virtual void End() = 0;
 
         void PushRenderer(Renderer* rdr);
 

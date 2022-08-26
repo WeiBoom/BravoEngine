@@ -5,7 +5,7 @@ namespace Bravo
 	{
 	}
 
-	bool GLWindow::init(int width, int height, const std::string& title)
+	bool GLWindow::Init(int width, int height, const std::string& title)
 	{
 		Width = width;
 		Height = height;
@@ -13,11 +13,11 @@ namespace Bravo
 
 		// todo
 		// 1. 初始化渲染窗口
-		m_RenderContext->init(this);
-		m_UIContext->init(this);
+		m_RenderContext->Init(this);
+		m_UIContext->Init(this);
 		// 2. 初始化UI界面
 
-		return m_isRunning;
+		return m_IsRunning;
 	}
 
 	void GLWindow::PrepareData() 
@@ -52,36 +52,36 @@ namespace Bravo
 	}
 
 
-	void GLWindow::render()
+	void GLWindow::Render()
 	{
-		m_RenderContext->pre_render();
-		m_UIContext->pre_render();
+		m_RenderContext->PreRender();
+		m_UIContext->PreRender();
 
 		m_RenderContext->Render();
 
-		m_UIContext->post_render();
-		m_RenderContext->post_render();
+		m_UIContext->PostRender();
+		m_RenderContext->PostRender();
 	}
 
-	void GLWindow::handle_input()
+	void GLWindow::HandleInput()
 	{
 	}
 
-	void GLWindow::on_scroll(double delta)
+	void GLWindow::OnScroll(double delta)
 	{
 	}
 
-	void GLWindow::on_key(int key, int scancode, int action, int mods)
+	void GLWindow::OnKey(int key, int scancode, int action, int mods)
 	{
 	}
 
-	void GLWindow::on_resize(int width, int height)
+	void GLWindow::OnResize(int width, int height)
 	{
 	}
 
-	void GLWindow::on_close()
+	void GLWindow::OnClose()
 	{
-		m_isRunning = false;
+		m_IsRunning = false;
 	}
 
 

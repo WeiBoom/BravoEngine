@@ -5,12 +5,12 @@ namespace Bravo
     class IWindow
     {
     public:
-        virtual void* get_native_window() = 0;
-        virtual void set_native_window(void* window) = 0;
-        virtual void on_scroll(double delta) = 0;
-        virtual void on_key(int key, int scancode, int action, int mods) = 0;
-        virtual void on_resize(int width, int height) = 0;
-        virtual void on_close() = 0;
+        virtual void* GetNativeWindow() = 0;
+        virtual void SetNativeWindow(void* window) = 0;
+        virtual void OnScroll(double delta) = 0;
+        virtual void OnKey(int key, int scancode, int action, int mods) = 0;
+        virtual void OnResize(int width, int height) = 0;
+        virtual void OnClose() = 0;
     public:
         int Width;
         int Height;

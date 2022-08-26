@@ -7,10 +7,10 @@ namespace Bravo
 	class UIContext : public RenderContext
 	{
 	public:
-		bool init(Bravo::IWindow* window) override;
-		void pre_render() override;
-		void post_render() override;
-		void end() override;
+		bool Init(Bravo::IWindow* window) override;
+		void PreRender() override;
+		void PostRender() override;
+		void End() override;
 
 	};
 }

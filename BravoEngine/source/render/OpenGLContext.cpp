@@ -6,31 +6,31 @@ GLDebug globalGLDebug;
 
 namespace Bravo
 {
-	static void on_key_callback(GLFWwindow* window, int key, int scancode, int action, int mods)
+	static void OnKeyCallback(GLFWwindow* window, int key, int scancode, int action, int mods)
 	{
 		auto pWindow = static_cast<Bravo::IWindow*>(glfwGetWindowUserPointer(window));
-		pWindow->on_key(key, scancode, action, mods);
+		pWindow->OnKey(key, scancode, action, mods);
 	}
 
-	static void on_scroll_callback(GLFWwindow* window, double xoffset, double yoffset)
+	static void OnScrollCallback(GLFWwindow* window, double xoffset, double yoffset)
 	{
 		auto pWindow = static_cast<Bravo::IWindow*>(glfwGetWindowUserPointer(window));
-		pWindow->on_scroll(yoffset);
+		pWindow->OnScroll(yoffset);
 	}
 
-	static void on_window_size_callback(GLFWwindow* window, int width, int height)
+	static void OnWindowSizeCallback(GLFWwindow* window, int width, int height)
 	{
 		auto pWindow = static_cast<Bravo::IWindow*>(glfwGetWindowUserPointer(window));
-		pWindow->on_resize(width, height);
+		pWindow->OnResize(width, height);
 	}
 
-	static void on_window_close_callback(GLFWwindow* window)
+	static void OnWindowCloseCallback(GLFWwindow* window)
 	{
 		Bravo::IWindow* pWindow = static_cast<Bravo::IWindow*>(glfwGetWindowUserPointer(window));
-		pWindow->on_close();
+		pWindow->OnClose();
 	}
 
-	static void fragment_size_callback(GLFWwindow* window, int width, int height)
+	static void FragmentSizeCallback(GLFWwindow* window, int width, int height)
 	{
 		glViewport(0, 0, width, height);
 	}
@@ -47,9 +47,9 @@ namespace Bravo
 		 globalGLDebug.OutputError(source, type, id, severity, message);
 	}
 
-	bool OpenGLContext::init(Bravo::IWindow* window)
+	bool OpenGLContext::Init(Bravo::IWindow* window)
 	{
-		__super::init(window);
+		__super::Init(window);
 		if (!glfwInit())
 		{
 			fprintf(stderr, "Error: GLFW Window couldn't be initialized\n");
@@ -65,7 +65,7 @@ namespace Bravo
 #endif
 
 		auto glWindow = glfwCreateWindow(window->Width, window->Height, window->Title.c_str(), nullptr, nullptr);
-		window->set_native_window(glWindow);
+		window->SetNativeWindow(glWindow);
 
 		if (!glWindow)
 		{
@@ -75,10 +75,10 @@ namespace Bravo
 
 		// set window callback
 		glfwSetWindowUserPointer(glWindow, window);
-		glfwSetFramebufferSizeCallback(glWindow, fragment_size_callback);
-		glfwSetScrollCallback(glWindow, on_scroll_callback);
-		glfwSetWindowSizeCallback(glWindow, on_window_size_callback);
-		glfwSetWindowCloseCallback(glWindow, on_window_close_callback);
+		glfwSetFramebufferSizeCallback(glWindow, FragmentSizeCallback);
+		glfwSetScrollCallback(glWindow, OnScrollCallback);
+		glfwSetWindowSizeCallback(glWindow, OnWindowSizeCallback);
+		glfwSetWindowCloseCallback(glWindow, OnWindowCloseCallback);
 		// make current context
 		glfwMakeContextCurrent(glWindow);
 
@@ -102,22 +102,22 @@ namespace Bravo
 		return true;
 	}
 
-	void OpenGLContext::pre_render()
+	void OpenGLContext::PreRender()
 	{
 		glViewport(0, 0, m_window->Width, m_window->Height);
 		glClearColor(0.2f, 0.2f, 0.2f, 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 	}
 
-	void OpenGLContext::post_render()
+	void OpenGLContext::PostRender()
 	{
 		glfwPollEvents();
-		glfwSwapBuffers((GLFWwindow*)m_window->get_native_window());
+		glfwSwapBuffers((GLFWwindow*)m_window->GetNativeWindow());
 	}
 
-	void OpenGLContext::end()
+	void OpenGLContext::End()
 	{
-		glfwDestroyWindow((GLFWwindow*)m_window->get_native_window());
+		glfwDestroyWindow((GLFWwindow*)m_window->GetNativeWindow());
 		glfwTerminate();
 	}
 }

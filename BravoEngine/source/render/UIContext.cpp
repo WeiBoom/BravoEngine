@@ -3,20 +3,20 @@
 namespace Bravo
 {
 
-    bool UIContext::init(Bravo::IWindow* window)
+    bool UIContext::Init(Bravo::IWindow* window)
     {
         return false;
     }
 
-    void UIContext::pre_render()
+    void UIContext::PreRender()
     {
     }
 
-    void UIContext::post_render()
+    void UIContext::PostRender()
     {
     }
 
-    void UIContext::end()
+    void UIContext::End()
     {
     }
 }

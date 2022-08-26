@@ -6,12 +6,12 @@ namespace Bravo
     {
     public:
 
-        bool init(Bravo::IWindow* window) override;
+        bool Init(Bravo::IWindow* window) override;
 
-        void pre_render() override;
+        void PreRender() override;
 
-        void post_render() override;
+        void PostRender() override;
 
-        void end() override;
+        void End() override;
     };
 }

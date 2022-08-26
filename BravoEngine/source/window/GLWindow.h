@@ -11,41 +11,41 @@ namespace Bravo
 	class GLWindow : public IWindow
 	{
 	public:
-		GLWindow() : m_isRunning(true),m_window(nullptr) {
+		GLWindow() : m_IsRunning(true),m_Window(nullptr) {
 			m_UIContext = std::make_unique<UIContext>();
 			m_RenderContext = std::make_unique<OpenGLContext>();
 		}
 		~GLWindow();
 	public:
-		bool init(int width, int height, const std::string& title);
+		bool Init(int width, int height, const std::string& title);
 
-		bool is_running() { return m_isRunning; }
+		bool IsRunning() { return m_IsRunning; }
 
 		void PrepareData();
 
-		void render();
+		void Render();
 
-		void handle_input();
+		void HandleInput();
 
 	// implement interface
 	public :
 
-		void on_scroll(double delta) override;
+		void OnScroll(double delta) override;
 
-		void on_key(int key, int scancode, int action, int mods) override;
+		void OnKey(int key, int scancode, int action, int mods) override;
 
-		void on_resize(int width, int height) override;
+		void OnResize(int width, int height) override;
 
-		void on_close() override;
+		void OnClose() override;
 
-		void* get_native_window() override { return m_window; }
+		void* GetNativeWindow() override { return m_Window; }
 
-		void set_native_window(void* window) override { m_window = (GLFWwindow*)window; }
+		void SetNativeWindow(void* window) override { m_Window = (GLFWwindow*)window; }
 		
 	private :
 
-		bool m_isRunning;
-		GLFWwindow* m_window;
+		bool m_IsRunning;
+		GLFWwindow* m_Window;
 
 		// ui 
 		std::unique_ptr<UIContext> m_UIContext;
