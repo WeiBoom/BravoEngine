@@ -1,0 +1,3 @@
+[submodule "BravoEngine/source/3rdparty/spdlog"]
+	path = BravoEngine/source/3rdparty/spdlog
+	url = https://github.com/gabime/spdlog.git

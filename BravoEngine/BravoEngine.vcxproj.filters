@@ -24,6 +24,7 @@
     <ClInclude Include="source\render\VertexArray.h" />
     <ClInclude Include="source\render\VertexBuffer.h" />
     <ClInclude Include="source\render\VertexLayout.h" />
+    <ClInclude Include="source\utils\Log.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="source\Application.cpp">
@@ -46,6 +47,7 @@
     <ClCompile Include="source\render\Shader.cpp" />
     <ClCompile Include="source\render\VertexArray.cpp" />
     <ClCompile Include="source\render\VertexBuffer.cpp" />
+    <ClCompile Include="source\utils\Log.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="source">

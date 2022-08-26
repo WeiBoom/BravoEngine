@@ -108,7 +108,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir)source\3rdparty\imgui-docking;$(ProjectDir)source\3rdparty\imgui-docking\backends;$(ProjectDir)source\3rdparty\plugins\imgui;$(ProjectDir)\include;$(ProjectDir)\source;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)source\3rdparty\imgui-docking;$(ProjectDir)source\3rdparty\imgui-docking\backends;$(ProjectDir)source\3rdparty\plugins\imgui;$(ProjectDir)\include;$(ProjectDir)\source;$(ProjectDir)\source\3rdparty\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -147,6 +147,7 @@
     <ClInclude Include="source\render\VertexArray.h" />
     <ClInclude Include="source\render\VertexBuffer.h" />
     <ClInclude Include="source\render\VertexLayout.h" />
+    <ClInclude Include="source\utils\Log.h" />
     <ClInclude Include="source\window\GLWindow.h" />
     <ClInclude Include="source\window\IWindow.h" />
   </ItemGroup>
@@ -164,6 +165,7 @@
     <ClCompile Include="source\render\UIContext.cpp" />
     <ClCompile Include="source\render\VertexArray.cpp" />
     <ClCompile Include="source\render\VertexBuffer.cpp" />
+    <ClCompile Include="source\utils\Log.cpp" />
     <ClCompile Include="source\window\GLWindow.cpp" />
   </ItemGroup>
   <ItemGroup>

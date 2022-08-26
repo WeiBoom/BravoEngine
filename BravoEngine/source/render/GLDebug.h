@@ -2,6 +2,7 @@
 #include <unordered_map>
 #include <glad/glad.h>
 
+#include "../utils/Log.h"
 class GLDebug
 {
 private:

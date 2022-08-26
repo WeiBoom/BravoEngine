@@ -1,6 +1,7 @@
 #pragma once
 
 #include "define.h"
+#include "utils/Log.h"
 #include "window/GLWindow.h"
 
 namespace Bravo

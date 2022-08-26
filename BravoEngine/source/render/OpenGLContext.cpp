@@ -52,7 +52,8 @@ namespace Bravo
 		__super::Init(window);
 		if (!glfwInit())
 		{
-			fprintf(stderr, "Error: GLFW Window couldn't be initialized\n");
+			//fprintf(stderr, "Error: GLFW Window couldn't be initialized\n");
+			BRAVO_CORE_ERROR("Error: GLFW Window couldn't be initialized\n");
 			return false;
 		}
 
@@ -69,7 +70,8 @@ namespace Bravo
 
 		if (!glWindow)
 		{
-			fprintf(stderr, "Error: GLFW Window couldn't be created\n");
+			//fprintf(stderr, "Error: GLFW Window couldn't be created\n");
+			BRAVO_CORE_ERROR("Error: GLFW Window couldn't be created\n");
 			return false;
 		}
 
@@ -84,7 +86,8 @@ namespace Bravo
 
 		if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
 		{
-			fprintf(stderr, "Error: initialize GLAD failed\n");
+			//fprintf(stderr, "Error: initialize GLAD failed\n");
+			BRAVO_CORE_ERROR("Error: initialize GLAD failed\n");
 			return false;
 		}
 
@@ -93,7 +96,10 @@ namespace Bravo
 		glGetIntegerv(GL_MAJOR_VERSION, &majorVersion);
 		int minorVersion;
 		glGetIntegerv(GL_MINOR_VERSION, &minorVersion);
-		fprintf( stdout, "majorVersion: %d, minorVersion: %d\n", majorVersion, minorVersion);
+		// fprintf( stdout, "majorVersion: %d, minorVersion: %d\n", majorVersion, minorVersion);
+		
+		BRAVO_CORE_INFO("majorVersion: {0}, minorVersion: {1}\n", majorVersion, minorVersion);
+		
 		if (minorVersion > 4) 
 		{
 			glEnable(GL_DEBUG_OUTPUT);

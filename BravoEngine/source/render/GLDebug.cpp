@@ -32,7 +32,8 @@ void GLDebug::OutputError(GLenum source, GLenum type, GLuint id, GLenum severity
 	//"type: " << mType[(int)type] << std::endl <<
 	//"id: " << id << std::endl <<
 	//"mgs: " << message << std::endl;
+	
+	//printf("serverity: %s\nsrc: %s\ntype: %s\nid: %i\nmsg: %s\n\n\n\n", mServerity[(int)severity].c_str(), mSrc[(int)source].c_str(), mType[(int)type].c_str(), id, message);
 
-	printf("serverity: %s\nsrc: %s\ntype: %s\nid: %i\nmsg: %s\n\n\n\n", mServerity[(int)severity].c_str(), mSrc[(int)source].c_str(), mType[(int)type].c_str(), id, message);
-
+	BRAVO_CORE_ERROR("serverity: {0}\nsrc: {1}\ntype: {2}\nid: {3}\nmsg: {4}\n\n\n\n", mServerity[(int)severity], mSrc[(int)source], mType[(int)type], id, message);
 }
