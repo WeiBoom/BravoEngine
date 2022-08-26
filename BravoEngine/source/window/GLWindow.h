@@ -21,6 +21,8 @@ namespace Bravo
 
 		bool is_running() { return m_isRunning; }
 
+		void PrepareData();
+
 		void render();
 
 		void handle_input();

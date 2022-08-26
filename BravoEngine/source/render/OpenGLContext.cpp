@@ -1,5 +1,8 @@
 #include "../define.h"
 #include "OpenGLContext.h"
+#include "GLDebug.h"
+
+GLDebug globalGLDebug;
 
 namespace Bravo
 {
@@ -32,6 +35,17 @@ namespace Bravo
 		glViewport(0, 0, width, height);
 	}
 
+	void GLAPIENTRY ErrorCallback(
+		GLenum source,
+		GLenum type,
+		GLuint id,
+		GLenum severity,
+		GLsizei length,
+		const GLchar* message,
+		const void* userParam)
+	{
+		 globalGLDebug.OutputError(source, type, id, severity, message);
+	}
 
 	bool OpenGLContext::init(Bravo::IWindow* window)
 	{
@@ -74,8 +88,17 @@ namespace Bravo
 			return false;
 		}
 
-		glEnable(GL_DEPTH_TEST);
-
+		// version check
+		int majorVersion;
+		glGetIntegerv(GL_MAJOR_VERSION, &majorVersion);
+		int minorVersion;
+		glGetIntegerv(GL_MINOR_VERSION, &minorVersion);
+		fprintf( stdout, "majorVersion: %d, minorVersion: %d\n", majorVersion, minorVersion);
+		if (minorVersion > 4) 
+		{
+			glEnable(GL_DEBUG_OUTPUT);
+			glDebugMessageCallback(ErrorCallback, 0);
+		}		
 		return true;
 	}
 

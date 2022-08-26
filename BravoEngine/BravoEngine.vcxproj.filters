@@ -16,6 +16,14 @@
     <ClInclude Include="source\render\OpenGLContext.h" />
     <ClInclude Include="source\render\RenderContext.h" />
     <ClInclude Include="source\render\UIContext.h" />
+    <ClInclude Include="source\render\GLDebug.h" />
+    <ClInclude Include="source\render\IndexBuffer.h" />
+    <ClInclude Include="source\render\Mesh.h" />
+    <ClInclude Include="source\render\Renderer.h" />
+    <ClInclude Include="source\render\Shader.h" />
+    <ClInclude Include="source\render\VertexArray.h" />
+    <ClInclude Include="source\render\VertexBuffer.h" />
+    <ClInclude Include="source\render\VertexLayout.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="source\Application.cpp">
@@ -31,6 +39,13 @@
     <ClCompile Include="source\render\RenderContext.cpp" />
     <ClCompile Include="source\render\UIContext.cpp" />
     <ClCompile Include="source\glad.c" />
+    <ClCompile Include="source\render\GLDebug.cpp" />
+    <ClCompile Include="source\render\IndexBuffer.cpp" />
+    <ClCompile Include="source\render\Mesh.cpp" />
+    <ClCompile Include="source\render\Renderer.cpp" />
+    <ClCompile Include="source\render\Shader.cpp" />
+    <ClCompile Include="source\render\VertexArray.cpp" />
+    <ClCompile Include="source\render\VertexBuffer.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="source">

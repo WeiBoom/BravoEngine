@@ -10,6 +10,7 @@ namespace Bravo
 
 	void Application::Loop()
 	{
+		m_window->PrepareData();
 		while (m_window->is_running())
 		{
 			m_window->render();
