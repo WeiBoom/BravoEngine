@@ -4,50 +4,139 @@
     <ClInclude Include="source\define.h">
       <Filter>source</Filter>
     </ClInclude>
-    <ClInclude Include="source\Application.h">
-      <Filter>source</Filter>
-    </ClInclude>
     <ClInclude Include="source\window\GLWindow.h">
       <Filter>source\window</Filter>
     </ClInclude>
     <ClInclude Include="source\window\IWindow.h">
       <Filter>source\window</Filter>
     </ClInclude>
-    <ClInclude Include="source\render\OpenGLContext.h" />
-    <ClInclude Include="source\render\RenderContext.h" />
-    <ClInclude Include="source\render\UIContext.h" />
-    <ClInclude Include="source\render\GLDebug.h" />
-    <ClInclude Include="source\render\IndexBuffer.h" />
-    <ClInclude Include="source\render\Mesh.h" />
-    <ClInclude Include="source\render\Renderer.h" />
-    <ClInclude Include="source\render\Shader.h" />
-    <ClInclude Include="source\render\VertexArray.h" />
-    <ClInclude Include="source\render\VertexBuffer.h" />
-    <ClInclude Include="source\render\VertexLayout.h" />
-    <ClInclude Include="source\utils\Log.h" />
+    <ClInclude Include="source\render\GLDebug.h">
+      <Filter>source\core</Filter>
+    </ClInclude>
+    <ClInclude Include="source\render\IndexBuffer.h">
+      <Filter>source\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Coding\BravoEngine\BravoEngine\source\Layer.h">
+      <Filter>source\core</Filter>
+    </ClInclude>
+    <ClInclude Include="source\utils\Log.h">
+      <Filter>source\core</Filter>
+    </ClInclude>
+    <ClInclude Include="source\render\Mesh.h">
+      <Filter>source\core</Filter>
+    </ClInclude>
+    <ClInclude Include="source\render\OpenGLContext.h">
+      <Filter>source\core</Filter>
+    </ClInclude>
+    <ClInclude Include="source\render\RenderContext.h">
+      <Filter>source\core</Filter>
+    </ClInclude>
+    <ClInclude Include="source\render\Renderer.h">
+      <Filter>source\core</Filter>
+    </ClInclude>
+    <ClInclude Include="source\render\Shader.h">
+      <Filter>source\core</Filter>
+    </ClInclude>
+    <ClInclude Include="source\render\UIContext.h">
+      <Filter>source\core</Filter>
+    </ClInclude>
+    <ClInclude Include="source\render\VertexArray.h">
+      <Filter>source\core</Filter>
+    </ClInclude>
+    <ClInclude Include="source\render\VertexBuffer.h">
+      <Filter>source\core</Filter>
+    </ClInclude>
+    <ClInclude Include="source\render\VertexLayout.h">
+      <Filter>source\core</Filter>
+    </ClInclude>
+    <ClInclude Include="source\3rdparty\imgui\imgui.h">
+      <Filter>source\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="source\3rdparty\imgui\imgui_internal.h">
+      <Filter>source\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="source\3rdparty\imgui\backends\imgui_impl_glfw.h">
+      <Filter>source\imgui\source</Filter>
+    </ClInclude>
+    <ClInclude Include="source\3rdparty\imgui\backends\imgui_impl_opengl3.h">
+      <Filter>source\imgui\source</Filter>
+    </ClInclude>
+    <ClInclude Include="source\3rdparty\imgui\backends\imgui_impl_opengl3_loader.h">
+      <Filter>source\imgui\source</Filter>
+    </ClInclude>
+    <ClInclude Include="source\3rdparty\imgui\imconfig.h">
+      <Filter>source\imgui\source</Filter>
+    </ClInclude>
+    <ClInclude Include="source\Application.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="source\Application.cpp">
-      <Filter>source</Filter>
-    </ClCompile>
     <ClCompile Include="source\window\GLWindow.cpp">
       <Filter>source\window</Filter>
     </ClCompile>
     <ClCompile Include="source\main.cpp">
       <Filter>source</Filter>
     </ClCompile>
-    <ClCompile Include="source\render\OpenGLContext.cpp" />
-    <ClCompile Include="source\render\RenderContext.cpp" />
-    <ClCompile Include="source\render\UIContext.cpp" />
-    <ClCompile Include="source\glad.c" />
-    <ClCompile Include="source\render\GLDebug.cpp" />
-    <ClCompile Include="source\render\IndexBuffer.cpp" />
-    <ClCompile Include="source\render\Mesh.cpp" />
-    <ClCompile Include="source\render\Renderer.cpp" />
-    <ClCompile Include="source\render\Shader.cpp" />
-    <ClCompile Include="source\render\VertexArray.cpp" />
-    <ClCompile Include="source\render\VertexBuffer.cpp" />
-    <ClCompile Include="source\utils\Log.cpp" />
+    <ClCompile Include="source\render\GLDebug.cpp">
+      <Filter>source\core</Filter>
+    </ClCompile>
+    <ClCompile Include="source\render\IndexBuffer.cpp">
+      <Filter>source\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Coding\BravoEngine\BravoEngine\source\Layer.cpp">
+      <Filter>source\core</Filter>
+    </ClCompile>
+    <ClCompile Include="source\utils\Log.cpp">
+      <Filter>source\core</Filter>
+    </ClCompile>
+    <ClCompile Include="source\render\Mesh.cpp">
+      <Filter>source\core</Filter>
+    </ClCompile>
+    <ClCompile Include="source\render\OpenGLContext.cpp">
+      <Filter>source\core</Filter>
+    </ClCompile>
+    <ClCompile Include="source\render\RenderContext.cpp">
+      <Filter>source\core</Filter>
+    </ClCompile>
+    <ClCompile Include="source\render\Renderer.cpp">
+      <Filter>source\core</Filter>
+    </ClCompile>
+    <ClCompile Include="source\render\Shader.cpp">
+      <Filter>source\core</Filter>
+    </ClCompile>
+    <ClCompile Include="source\render\UIContext.cpp">
+      <Filter>source\core</Filter>
+    </ClCompile>
+    <ClCompile Include="source\render\VertexArray.cpp">
+      <Filter>source\core</Filter>
+    </ClCompile>
+    <ClCompile Include="source\render\VertexBuffer.cpp">
+      <Filter>source\core</Filter>
+    </ClCompile>
+    <ClCompile Include="source\glad.c">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="source\3rdparty\imgui\imgui.cpp">
+      <Filter>source\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="source\3rdparty\imgui\imgui_demo.cpp">
+      <Filter>source\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="source\3rdparty\imgui\imgui_draw.cpp">
+      <Filter>source\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="source\3rdparty\imgui\imgui_tables.cpp">
+      <Filter>source\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="source\3rdparty\imgui\imgui_widgets.cpp">
+      <Filter>source\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="source\3rdparty\imgui\backends\imgui_impl_glfw.cpp">
+      <Filter>source\imgui\source</Filter>
+    </ClCompile>
+    <ClCompile Include="source\3rdparty\imgui\backends\imgui_impl_opengl3.cpp">
+      <Filter>source\imgui\source</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Application.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="source">
@@ -56,8 +145,19 @@
     <Filter Include="source\window">
       <UniqueIdentifier>{8bb34e0f-0131-46e7-bdfd-aac58c6b0f18}</UniqueIdentifier>
     </Filter>
+    <Filter Include="source\imgui">
+      <UniqueIdentifier>{1f849824-8495-4840-80fb-f781fe09d392}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\core">
+      <UniqueIdentifier>{37ce8ef5-c6e3-4a3c-b2f9-9fa65a85ee8d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\imgui\source">
+      <UniqueIdentifier>{378d6844-8e0c-414a-bfb6-2c160bd82bc9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
+    <Natvis Include="source\3rdparty\imgui\misc\debuggers\imgui.natvis">
+      <Filter>source\imgui\source</Filter>
+    </Natvis>
   </ItemGroup>
 </Project>

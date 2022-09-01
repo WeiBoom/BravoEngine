@@ -14,8 +14,8 @@ namespace Bravo
 		// todo
 		// 1. 初始化渲染窗口
 		m_RenderContext->Init(this);
+		// 2. 初始化ImGui
 		m_UIContext->Init(this);
-		// 2. 初始化UI界面
 
 		return m_IsRunning;
 	}
@@ -51,7 +51,6 @@ namespace Bravo
 		m_RenderContext->PushRenderer(new Renderer(mesh3, shader2));
 	}
 
-
 	void GLWindow::Render()
 	{
 		m_RenderContext->PreRender();
@@ -82,6 +81,9 @@ namespace Bravo
 	void GLWindow::OnClose()
 	{
 		m_IsRunning = false;
+
+		m_RenderContext->End();
+		m_UIContext->End();
 	}
 
 

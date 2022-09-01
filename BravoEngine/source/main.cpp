@@ -8,9 +8,10 @@ int main()
 	// init application
 	std::string app_name = "Bravo Engine";
 	auto app = std::make_unique<Bravo::Application>(app_name);
-	//Bravo::Log::GetCoreLogger()->info("initialize");
+	Bravo::Log::GetCoreLogger()->info("initialize");
 	BRAVO_CORE_INFO("{0} initialize success", app_name);
-	
 	// tick render
 	app->Loop();
+
+
 }

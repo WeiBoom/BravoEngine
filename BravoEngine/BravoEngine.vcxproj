@@ -71,8 +71,8 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>$(IncludePath)</IncludePath>
-    <LibraryPath>$(LibraryPath)</LibraryPath>
+    <IncludePath>$(ProjectDir)\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(ProjectDir)\libs;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -108,7 +108,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir)source\3rdparty\imgui-docking;$(ProjectDir)source\3rdparty\imgui-docking\backends;$(ProjectDir)source\3rdparty\plugins\imgui;$(ProjectDir)\include;$(ProjectDir)\source;$(ProjectDir)\source\3rdparty\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)\source\3rdparty\spdlog\include;$(ProjectDir)\source\3rdparty\imgui;$(ProjectDir)\source\3rdparty\imgui\backends;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -134,6 +134,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\..\Coding\BravoEngine\BravoEngine\source\Layer.h" />
+    <ClInclude Include="source\3rdparty\imgui\backends\imgui_impl_glfw.h" />
+    <ClInclude Include="source\3rdparty\imgui\backends\imgui_impl_opengl3.h" />
+    <ClInclude Include="source\3rdparty\imgui\backends\imgui_impl_opengl3_loader.h" />
+    <ClInclude Include="source\3rdparty\imgui\imconfig.h" />
+    <ClInclude Include="source\3rdparty\imgui\imgui.h" />
+    <ClInclude Include="source\3rdparty\imgui\imgui_internal.h" />
     <ClInclude Include="source\Application.h" />
     <ClInclude Include="source\define.h" />
     <ClInclude Include="source\render\GLDebug.h" />
@@ -152,6 +159,14 @@
     <ClInclude Include="source\window\IWindow.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\..\Coding\BravoEngine\BravoEngine\source\Layer.cpp" />
+    <ClCompile Include="source\3rdparty\imgui\backends\imgui_impl_glfw.cpp" />
+    <ClCompile Include="source\3rdparty\imgui\backends\imgui_impl_opengl3.cpp" />
+    <ClCompile Include="source\3rdparty\imgui\imgui.cpp" />
+    <ClCompile Include="source\3rdparty\imgui\imgui_demo.cpp" />
+    <ClCompile Include="source\3rdparty\imgui\imgui_draw.cpp" />
+    <ClCompile Include="source\3rdparty\imgui\imgui_tables.cpp" />
+    <ClCompile Include="source\3rdparty\imgui\imgui_widgets.cpp" />
     <ClCompile Include="source\Application.cpp" />
     <ClCompile Include="source\glad.c" />
     <ClCompile Include="source\main.cpp" />
@@ -169,18 +184,8 @@
     <ClCompile Include="source\window\GLWindow.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
+    <Natvis Include="source\3rdparty\imgui\misc\debuggers\imgui.natvis" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
-  <ImportGroup Label="ExtensionTargets">
-    <Import Project="..\packages\nupengl.core.redist.0.1.0.1\build\native\nupengl.core.redist.targets" Condition="Exists('..\packages\nupengl.core.redist.0.1.0.1\build\native\nupengl.core.redist.targets')" />
-    <Import Project="..\packages\nupengl.core.0.1.0.1\build\native\nupengl.core.targets" Condition="Exists('..\packages\nupengl.core.0.1.0.1\build\native\nupengl.core.targets')" />
-  </ImportGroup>
-  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
-    <PropertyGroup>
-      <ErrorText>这台计算机上缺少此项目引用的 NuGet 程序包。使用“NuGet 程序包还原”可下载这些程序包。有关更多信息，请参见 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
-    </PropertyGroup>
-    <Error Condition="!Exists('..\packages\nupengl.core.redist.0.1.0.1\build\native\nupengl.core.redist.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\nupengl.core.redist.0.1.0.1\build\native\nupengl.core.redist.targets'))" />
-    <Error Condition="!Exists('..\packages\nupengl.core.0.1.0.1\build\native\nupengl.core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\nupengl.core.0.1.0.1\build\native\nupengl.core.targets'))" />
-  </Target>
+  <ImportGroup Label="ExtensionTargets" />
 </Project>
