@@ -16,9 +16,6 @@
     <ClInclude Include="source\render\IndexBuffer.h">
       <Filter>source\core</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\Coding\BravoEngine\BravoEngine\source\Layer.h">
-      <Filter>source\core</Filter>
-    </ClInclude>
     <ClInclude Include="source\utils\Log.h">
       <Filter>source\core</Filter>
     </ClInclude>
@@ -80,9 +77,6 @@
       <Filter>source\core</Filter>
     </ClCompile>
     <ClCompile Include="source\render\IndexBuffer.cpp">
-      <Filter>source\core</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\Coding\BravoEngine\BravoEngine\source\Layer.cpp">
       <Filter>source\core</Filter>
     </ClCompile>
     <ClCompile Include="source\utils\Log.cpp">
