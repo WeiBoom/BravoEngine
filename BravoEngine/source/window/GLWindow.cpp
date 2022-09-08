@@ -42,13 +42,13 @@ namespace Bravo
 		std::shared_ptr<Mesh> mesh3 = std::make_shared<Mesh>(vertex, 5, indices3, 3, vbLayout);
 
 		std::shared_ptr<Shader> shader = std::make_shared<Shader>("Artwork\\Shaders\\default.shader");
-		std::shared_ptr<Shader> shader2 = std::make_shared<Shader>("Artwork\\Shaders\\default.shader");
-		shader->SetVec4("setColor", glm::vec4(0.5, 0.5, 0.5, 1));
-		shader2->SetVec4("setColor", glm::vec4(0.5, 0, 0, 1));
+		std::shared_ptr<Shader> shader2 = std::make_shared<Shader>("Artwork\\Shaders\\blue.shader");
+		std::shared_ptr<Material> mat1 = std::make_shared<Material>(shader);
+		std::shared_ptr<Material> mat2 = std::make_shared<Material>(shader2);
 
-		m_RenderContext->PushRenderer(new Renderer(mesh1, shader));
-		m_RenderContext->PushRenderer(new Renderer(mesh2, shader2));
-		m_RenderContext->PushRenderer(new Renderer(mesh3, shader2));
+		m_RenderContext->PushRenderer(new Renderer(mesh1, mat1));
+		m_RenderContext->PushRenderer(new Renderer(mesh2, mat2));
+		m_RenderContext->PushRenderer(new Renderer(mesh3, mat2));
 	}
 
 	void GLWindow::Render()

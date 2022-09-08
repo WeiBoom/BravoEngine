@@ -65,6 +65,9 @@
       <Filter>source\imgui\source</Filter>
     </ClInclude>
     <ClInclude Include="source\Application.h" />
+    <ClInclude Include="source\render\Material.h" />
+    <ClInclude Include="source\render\ShaderProperty.h" />
+    <ClInclude Include="source\utils\StringUtils.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="source\window\GLWindow.cpp">
@@ -131,6 +134,8 @@
       <Filter>source\imgui\source</Filter>
     </ClCompile>
     <ClCompile Include="source\Application.cpp" />
+    <ClCompile Include="source\render\Material.cpp" />
+    <ClCompile Include="source\render\ShaderProperty.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="source">
