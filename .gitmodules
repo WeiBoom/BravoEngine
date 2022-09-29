@@ -1,8 +1,8 @@
-[submodule "BravoEngine/source/3rdparty/spdlog"]
-	path = BravoEngine/source/3rdparty/spdlog
+[submodule "Bravo/vendor/spdlog"]
+	path = Bravo/vendor/spdlog
 	url = https://github.com/gabime/spdlog.git
 	branch = master
-[submodule "BravoEngine/source/3rdparty/imgui"]
-	path = BravoEngine/source/3rdparty/imgui
+[submodule "Bravo/vendor/imgui"]
+	path = Bravo/vendor/imgui
 	url = https://github.com/ocornut/imgui.git
 	branch = master
