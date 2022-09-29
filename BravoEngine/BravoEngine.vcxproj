@@ -155,6 +155,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="source\render\ShaderProperty.h" />
     <ClInclude Include="source\3rdparty\imgui\backends\imgui_impl_glfw.h" />
     <ClInclude Include="source\3rdparty\imgui\backends\imgui_impl_opengl3.h" />
     <ClInclude Include="source\3rdparty\imgui\backends\imgui_impl_opengl3_loader.h" />
@@ -165,6 +166,7 @@
     <ClInclude Include="source\define.h" />
     <ClInclude Include="source\render\GLDebug.h" />
     <ClInclude Include="source\render\IndexBuffer.h" />
+    <ClInclude Include="source\render\Material.h" />
     <ClInclude Include="source\render\Mesh.h" />
     <ClInclude Include="source\render\OpenGLContext.h" />
     <ClInclude Include="source\render\RenderContext.h" />
@@ -175,6 +177,7 @@
     <ClInclude Include="source\render\VertexBuffer.h" />
     <ClInclude Include="source\render\VertexLayout.h" />
     <ClInclude Include="source\utils\Log.h" />
+    <ClInclude Include="source\utils\StringUtils.h" />
     <ClInclude Include="source\window\GLWindow.h" />
     <ClInclude Include="source\window\IWindow.h" />
   </ItemGroup>
@@ -191,11 +194,13 @@
     <ClCompile Include="source\main.cpp" />
     <ClCompile Include="source\render\GLDebug.cpp" />
     <ClCompile Include="source\render\IndexBuffer.cpp" />
+    <ClCompile Include="source\render\Material.cpp" />
     <ClCompile Include="source\render\Mesh.cpp" />
     <ClCompile Include="source\render\OpenGLContext.cpp" />
     <ClCompile Include="source\render\RenderContext.cpp" />
     <ClCompile Include="source\render\Renderer.cpp" />
     <ClCompile Include="source\render\Shader.cpp" />
+    <ClCompile Include="source\render\ShaderProperty.cpp" />
     <ClCompile Include="source\render\UIContext.cpp" />
     <ClCompile Include="source\render\VertexArray.cpp" />
     <ClCompile Include="source\render\VertexBuffer.cpp" />
