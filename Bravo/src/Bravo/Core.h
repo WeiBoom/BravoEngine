@@ -1,6 +1,6 @@
 #pragma once
 
-#ifdef BRAVO_PLATFORM_WINDOW
+#ifdef BRAVO_PLATFORM_WINDOWS
 
 	#ifdef BRAVO_BUILD_DLL
 		#define BRAVO_API __declspec(dllexport)

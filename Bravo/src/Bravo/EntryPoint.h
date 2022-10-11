@@ -1,6 +1,6 @@
 #pragma once
 
-#ifdef BRAVO_PLATFORM_WINDOW
+#ifdef BRAVO_PLATFORM_WINDOWS
 
 extern Bravo::Application* Bravo::CreateApplication();
 
