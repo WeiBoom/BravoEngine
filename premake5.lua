@@ -19,6 +19,9 @@ project "Bravo"
 	targetdir ("%{wks.location}/bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("%{wks.location}/bin-int/" .. outputdir .. "/%{prj.name}")
 
+	pchheader "pch.h"
+	pchsource "Bravo/src/pch.cpp"
+
 	files
 	{
 		"%{prj.name}/src/**.h",
@@ -27,6 +30,7 @@ project "Bravo"
 
 	includedirs
 	{
+		"%{prj.name}/src",
 		"%{prj.name}/vendor/spdlog/include",
 	}
 

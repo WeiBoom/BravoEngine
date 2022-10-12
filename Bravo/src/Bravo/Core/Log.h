@@ -1,9 +1,8 @@
 #pragma once
 
-#include <memory>
-
-#include "Core.h"
+#include "Bravo/Core/Base.h"
 #include "spdlog/spdlog.h"
+#include "spdlog/fmt/ostr.h"
 
 namespace Bravo
 {

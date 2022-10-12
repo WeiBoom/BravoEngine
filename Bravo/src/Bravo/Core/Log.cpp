@@ -1,4 +1,5 @@
-#include "Log.h"
+#include "pch.h"
+#include "Bravo/Core/Log.h"
 //#include "spdlog/sinks/stdout_color_sinks.h"
 
 namespace Bravo

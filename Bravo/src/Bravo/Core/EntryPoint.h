@@ -1,5 +1,8 @@
 #pragma once
 
+#include "pch.h"
+
+
 #ifdef BRAVO_PLATFORM_WINDOWS
 
 extern Bravo::Application* Bravo::CreateApplication();
