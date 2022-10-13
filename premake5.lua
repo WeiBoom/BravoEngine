@@ -9,6 +9,11 @@ workspace "BravoEngine"
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
+IncludeDir = {}
+IncludeDir["GLFW"] = "%{prj.name}/vendor/GLFW/include"
+
+include "Bravo/vendor/GLFW"
+
 project "Bravo"
 	location "Bravo"
 	kind "SharedLib"
@@ -32,6 +37,13 @@ project "Bravo"
 	{
 		"%{prj.name}/src",
 		"%{prj.name}/vendor/spdlog/include",
+		"%{IncludeDir.GLFW}"
+	}
+
+	links
+	{
+		"GLFW",
+		"opengl32.lib"
 	}
 
 	postbuildcommands

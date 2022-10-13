@@ -6,3 +6,7 @@
 	path = Bravo/vendor/imgui
 	url = https://github.com/ocornut/imgui.git
 	branch = master
+[submodule "Bravo/vendor/GLFW"]
+	path = Bravo/vendor/GLFW
+	url = https://github.com/WeiBoom/glfw.git
+	branch = master
