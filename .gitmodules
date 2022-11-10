@@ -8,4 +8,4 @@
 	branch = master
 [submodule "Bravo/vendor/GLFW"]
 	path = Bravo/vendor/GLFW
-	url = https://github.com/TheCherno/glfw.git
+	url = https://github.com/WeiBoom/glfw.git

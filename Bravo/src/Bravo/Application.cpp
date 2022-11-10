@@ -4,10 +4,13 @@
 #include "Bravo/Events/ApplicationEvent.h"
 #include "Bravo/Core/Log.h"
 
+#include <GLFW/glfw3.h>
+
 namespace Bravo
 {
 	Application::Application()
 	{
+		m_Window = Window::Create();
 	}
 
 	Application::~Application()
@@ -16,9 +19,11 @@ namespace Bravo
 
 	void Application::Run()
 	{
-		WindowResizeEvent e(1200, 720);
-		BRAVO_TRACE(e.ToString());
-
-		while (true);
+		while (m_Running)
+		{
+			glClearColor(1, 0, 1, 1);
+			glClear(GL_COLOR_BUFFER_BIT);
+			m_Window->OnUpdate();
+		}
 	}
 }
