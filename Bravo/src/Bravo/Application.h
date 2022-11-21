@@ -1,8 +1,7 @@
 #pragma once
 
-#include "Bravo/Core/Base.h"
-
 #include "Bravo/Core/Window.h"
+#include "Bravo/Events/ApplicationEvent.h"
 
 namespace Bravo
 {
@@ -13,7 +12,9 @@ namespace Bravo
 		virtual ~Application();
 
 		void Run();
+		void OnEvent(Event& e);
 	private:
+		bool OnWindowClose(WindowCloseEvent& e);
 		Scope<Window> m_Window;
 		bool m_Running = true;
 	};

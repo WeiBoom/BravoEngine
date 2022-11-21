@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Bravo/Events/Event.h"
+#include <sstream> // ÁÙÊ±Ğ´µÄ
 
 namespace Bravo {
 
