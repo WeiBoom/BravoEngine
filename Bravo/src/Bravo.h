@@ -3,6 +3,7 @@
 
 // For use by Bravo applications
 #include "Bravo/Application.h"
+#include "Bravo/Core/Layer.h"
 #include "Bravo/Core/Log.h"
 
 // -------- Entry Point ----------
