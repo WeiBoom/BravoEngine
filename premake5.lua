@@ -11,8 +11,10 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
 IncludeDir = {}
 IncludeDir["GLFW"] = "%{prj.name}/vendor/GLFW/include"
+IncludeDir["Glad"] = "%{prj.name}/vendor/Glad/include"
 
 include "Bravo/vendor/GLFW"
+include "Bravo/vendor/Glad"
 
 project "Bravo"
 	location "Bravo"
@@ -37,12 +39,14 @@ project "Bravo"
 	{
 		"%{prj.name}/src",
 		"%{prj.name}/vendor/spdlog/include",
-		"%{IncludeDir.GLFW}"
+		"%{IncludeDir.GLFW}",
+		"%{IncludeDir.Glad}"
 	}
 
 	links
 	{
 		"GLFW",
+		"Glad",
 		"opengl32.lib"
 	}
 
@@ -59,6 +63,7 @@ project "Bravo"
 		{
 			"BRAVO_PLATFORM_WINDOWS",
 			"BRAVO_BUILD_DLL",
+			"GLFW_INCLUDE_NONE",
 		}
 
 	filter "configurations:Debug"
